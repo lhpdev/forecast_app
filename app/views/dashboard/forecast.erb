@@ -1,4 +1,8 @@
-<h1>Forecast Result for: <%= "#{result[:q]}" %></h1>
-<p>Current temperature: <%= "#{result[:current_temperature]} Celcius" %></p>
-<p>Max temperature: <%= "#{result[:max_temperature]} Celcius" %></p>
-<p>Min temperature: <%= "#{result[:min_temperature]} Celcius" %></p>
+<div class="container mx-auto mt-10 px-5 flex flex-col">
+  <h3 class='text-xl'><strong>Forecast Result for: </strong>"<%= "#{result[:q]}" %>"</h3>
+  <p class='mt-2'><strong>Current date: </strong><%= "#{Time.zone.today.to_fs(:long) }" %></p>
+  <p class='mt-2'><strong>Current temperature: </strong><%= "#{result[:current_temperature]} C" %></p>
+  <p class='mt-2'><strong>Current temperature: </strong>Max temperature: <%= "#{result[:max_temperature]} C" %></p>
+  <p class='mt-2'><strong>Current temperature: </strong>Min temperature: <%= "#{result[:min_temperature]} C" %></p>
+</div>
+

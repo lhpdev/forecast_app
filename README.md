@@ -9,7 +9,11 @@ Things you may want to cover:
 
 - Rails version: 8.1.4
 
-- System dependencies
+- System dependencies:
+  Free Location Seach API: https://nominatim.openstreetmap.org
+  Free Weather Forecast API search: https://open-meteo.com/
+
+I have decided to take use these APIs as both are public and do not require API key
 
 - Configuration:
   bin/dev
@@ -28,7 +32,7 @@ Things you may want to cover:
 
 # avenue_code_test
 
-Take Home Assessment - Apple
+Take Home Assessment
 
 Requirements:
 ● Must be done in Ruby on Rails
@@ -45,4 +49,3 @@ Assumptions:
 Submission:
 ● Use a public source code repository (GitHub, etc) to store your code
 ● Send us the link to your completed code
-● Please do not use “Apple” directly in your exercise
