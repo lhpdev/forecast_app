@@ -1,21 +1,12 @@
-class Forecast
-  def initialize(response, q)
-    @response = response
-    @q = q
-  end
-
-  def parse
-    return unless @response
-
-    object = {}
-
-    object[:q] = @q
-    object[:latitude] = @response['latitude']
-    object[:longitude] = @response['longitude']
-    object[:current_temperature] = @response['current']['temperature_2m']
-    object[:max_temperature] = @response['daily']['temperature_2m_max'].first
-    object[:min_temperature] = @response['daily']['temperature_2m_min'].first
-
-    object
+Forecast = Data.define(:current_temperature, :max_temperature, :min_temperature, :unit, :timezone, :fetched_at) do
+  def self.from_open_meteo(payload)
+    new(
+      current_temperature: payload.fetch("current").fetch("temperature_2m"),
+      max_temperature: payload.fetch("daily").fetch("temperature_2m_max").first,
+      min_temperature: payload.fetch("daily").fetch("temperature_2m_min").first,
+      unit: payload.dig("current_units", "temperature_2m") || "°C",
+      timezone: payload["timezone"],
+      fetched_at: Time.current
+    )
   end
 end
