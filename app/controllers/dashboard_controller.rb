@@ -3,13 +3,13 @@ class DashboardController < ApplicationController
   end
 
   def search
-    result = Search.new.fetch(zipcode_search_params)
+    result = Search.new(q_params).fetch_forecast
     render 'dashboard/forecast', locals: { result: result }
   end
 
   private
 
-  def zipcode_search_params
-    params.expect(:zipcode)
+  def q_params
+    params.expect(:q)
   end
 end

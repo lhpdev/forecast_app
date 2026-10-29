@@ -1,1 +1,4 @@
-<p>Forecast Result: <%= "#{result}" %></p>
+<h1>Forecast Result for: <%= "#{result[:q]}" %></h1>
+<p>Current temperature: <%= "#{result[:current_temperature]} Celcius" %></p>
+<p>Max temperature: <%= "#{result[:max_temperature]} Celcius" %></p>
+<p>Min temperature: <%= "#{result[:min_temperature]} Celcius" %></p>

@@ -1,7 +1,6 @@
 <h1>Forecast App</h1>
 <p>Please inform your zip code:</p>
 <%= form_with url: dashboard_search_path, method: :post do |form| %>
-  <%= form.label :zipcode, "Zipcode" %>
-  <%= form.search_field :zipcode %>
+  <%= form.search_field :q %>
   <%= form.submit "Search" %>
 <% end %>
