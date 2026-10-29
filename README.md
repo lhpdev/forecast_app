@@ -5,20 +5,44 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version: 3.3.5 +
 
-* System dependencies
+- Rails version: 8.1.4
 
-* Configuration
+- System dependencies
 
-* Database creation
+- Configuration:
+  bin/dev
+  It will start the server running on localhost:3000
 
-* Database initialization
+- Database creation
+  bin/rails db:create
 
-* How to run the test suite
+- Database initialization
+  bin/rails db:mibrate
 
-* Services (job queues, cache servers, search engines, etc.)
+- How to run the test suite
+  rails rspec
 
-* Deployment instructions
+- ...
 
-* ...
+# avenue_code_test
+
+Take Home Assessment - Apple
+
+Requirements:
+● Must be done in Ruby on Rails
+● Accept an address as input
+● Retrieve forecast data for the given zip code. This should include, at minimum, the current temperature (Bonus points - Retrieve high/low and/or extended forecast)
+● Display the requested forecast details to the user
+● Cache the forecast details for 30 minutes for all subsequent requests by zip codes.
+● Display an indicator if the result is pulled from cache.
+
+Assumptions:
+● This project is open to interpretation
+● Functionality is a priority over form
+● If you get stuck, complete as much as you can
+Submission:
+● Use a public source code repository (GitHub, etc) to store your code
+● Send us the link to your completed code
+● Please do not use “Apple” directly in your exercise
