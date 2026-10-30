@@ -1,0 +1,7 @@
+<%= form_with url: dashboard_search_path, method: :post, class: "mx-auto mt-8 flex max-w-xl gap-2" do |form| %>
+  <%= form.label :q, "Address", class: "sr-only" %>
+  <%= form.text_field :q, required: true, autofocus: true, placeholder: "Zip code or city, e.g. 95014",
+        class: "min-w-0 flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2.5" %>
+  <%= form.submit "Search", data: { turbo_submits_with: "Searching…" },
+        class: "cursor-pointer rounded-lg bg-blue-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-600" %>
+<% end %>

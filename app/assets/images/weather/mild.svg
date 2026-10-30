@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="sun" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#FFF4B8"/>
+      <stop offset="0.55" stop-color="#FFC531"/>
+      <stop offset="1" stop-color="#FF9A12"/>
+    </radialGradient>
+    <linearGradient id="cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D5E2F2"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#FFAA1F" stroke-width="6" stroke-linecap="round">
+    <line x1="50" y1="6" x2="50" y2="16"/>
+    <line x1="50" y1="6" x2="50" y2="16" transform="rotate(-45 50 46)"/>
+    <line x1="50" y1="6" x2="50" y2="16" transform="rotate(-90 50 46)"/>
+    <line x1="50" y1="6" x2="50" y2="16" transform="rotate(45 50 46)"/>
+    <line x1="50" y1="6" x2="50" y2="16" transform="rotate(90 50 46)"/>
+  </g>
+  <circle cx="50" cy="46" r="22" fill="url(#sun)"/>
+  <path d="M42 110h56a19 19 0 0 0 0-38a26 26 0 0 0-49-6a20 20 0 0 0-7 44z" fill="#9FB4CF" opacity="0.35" transform="translate(2 4)"/>
+  <path d="M42 110h56a19 19 0 0 0 0-38a26 26 0 0 0-49-6a20 20 0 0 0-7 44z" fill="url(#cloud)"/>
+</svg>

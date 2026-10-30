@@ -7,6 +7,7 @@ RSpec.describe "Dashboard", type: :request do
 
       expect(response).to have_http_status(:ok)
       expect(response.body).to include("Cupertino", "Current temperature", "°C")
+      expect(response.body).to include("weather/mild", "Mild weather") # 12.3°C in the cassette
       expect(response.body).not_to include("Served from cache")
     end
 

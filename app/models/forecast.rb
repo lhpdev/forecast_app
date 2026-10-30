@@ -9,4 +9,11 @@ Forecast = Data.define(:current_temperature, :max_temperature, :min_temperature,
       fetched_at: Time.current
     )
   end
+
+  def feel
+    if current_temperature >= 25 then :hot
+    elsif current_temperature <= 10 then :cold
+    else :mild
+    end
+  end
 end

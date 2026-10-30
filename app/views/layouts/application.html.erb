@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title><%= content_for(:title) || "Forecast App" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,20 +24,17 @@
   </head>
 
   <body class="bg-blue-100">
-    <main class="container mx-auto mt-28 px-5 flex flex-col">
-      <div class="d-flex flex-row">
-        <h1 class="text-4xl font-bold underline mb-6">Forecast App</h1>
-        <div>
-          <p class="mb-4">Please inform your address (it can be a zipcode or a city name):</p>
-          <%= form_with url: dashboard_search_path, method: :post, class: 'flex' do |form| %>
-            <%= form.search_field :q, type: 'text', class: 'bg-neutral-secondary-medium border border-default-medium text-heading text-base rounded-base focus:ring-brand focus:border-brand block w-full px-4 py-3.5 shadow-xs placeholder:text-body max-w-md' %>
-            <%= form.submit "Search", type: 'submit', class: 'text-white hover:text-grey bg-brand box-border border shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none ml-2 cursor-pointer bg-blue-500 hover:bg-blue-600' %>
-          <% end %>
-        </div>
-      </div>
-      <div id="forecast_result">
+    <main class="mx-auto flex max-w-2xl flex-col gap-10 px-4 pt-16 pb-24 sm:pt-28">
+      <header class="text-center">
+        <h1 class="text-4xl font-bold">Forecast App</h1>
+        <p class="mt-2 text-gray-600">Today's weather for any address, zip code or city.</p>
+
+        <%= render "dashboard/search_form" %>
+      </header>
+
+      <section id="forecast_result" aria-live="polite">
         <%= yield %>
-      </div>
+      </section>
     </main>
   </body>
 </html>
