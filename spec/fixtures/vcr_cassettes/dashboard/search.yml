@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&limit=1&q=95014
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - forecast_app/1.0 (+https://github.com/lhpdev/forecast_app)
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '621'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - gunicorn/asgi
+      X-Nominatim-Server:
+      - longma.openstreetmap.org
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 30 Oct 2026 12:10:23 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '2'
+      X-Served-By:
+      - cache-gru-sbgr1930020-GRU
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      X-Timer:
+      - S1793362224.555913,VS0,VE2
+      Vary:
+      - accept-language, Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=300
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjM4MjU4NDY1MywibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJwb3N0Y29kZV9pZCI6IlB1czo5NTAxNCIsImxhdCI6IjM3LjMxNzgwODQiLCJsb24iOiItMTIyLjAzNzIyNjQiLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6InBvc3Rjb2RlIiwicGxhY2VfcmFuayI6MjEsImltcG9ydGFuY2UiOjAuMTIwMDA5OTk5OTk5OTk5OTUsImFkZHJlc3N0eXBlIjoicG9zdGNvZGUiLCJuYW1lIjoiOTUwMTQiLCJkaXNwbGF5X25hbWUiOiI5NTAxNCwgQ3VwZXJ0aW5vLCBTYW50YSBDbGFyYSBDb3VudHksIENhbGlmb3JuaWEsIFVuaXRlZCBTdGF0ZXMiLCJhZGRyZXNzIjp7InBvc3Rjb2RlIjoiOTUwMTQiLCJjaXR5IjoiQ3VwZXJ0aW5vIiwiY291bnR5IjoiU2FudGEgQ2xhcmEgQ291bnR5Iiwic3RhdGUiOiJDYWxpZm9ybmlhIiwiSVNPMzE2Ni0yLWx2bDQiOiJVUy1DQSIsImNvdW50cnkiOiJVbml0ZWQgU3RhdGVzIiwiY291bnRyeV9jb2RlIjoidXMifSwiYm91bmRpbmdib3giOlsiMzcuMDkyNDg3MyIsIjM3LjU0MzEyMDciLCItMTIyLjMxOTM1NDAiLCItMTIxLjc1NTEzMDkiXX1d
+  recorded_at: Fri, 30 Oct 2026 12:10:23 GMT
+- request:
+    method: get
+    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m&daily=temperature_2m_max,temperature_2m_min&forecast_days=1&latitude=37.3178084&longitude=-122.0372264&timezone=auto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - forecast_app/1.0 (+https://github.com/lhpdev/forecast_app)
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 Oct 2026 12:10:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6MzcuMzEyMTIyLCJsb25naXR1ZGUiOi0xMjIuMDQ0NSwiZ2VuZXJhdGlvbnRpbWVfbXMiOjAuMDYwNTU4MzE5MDkxNzk2ODc1LCJ1dGNfb2Zmc2V0X3NlY29uZHMiOi0yNTIwMCwidGltZXpvbmUiOiJBbWVyaWNhL0xvc19BbmdlbGVzIiwidGltZXpvbmVfYWJicmV2aWF0aW9uIjoiR01ULTciLCJlbGV2YXRpb24iOjgyLjAsImN1cnJlbnRfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJpbnRlcnZhbCI6InNlY29uZHMiLCJ0ZW1wZXJhdHVyZV8ybSI6IsKwQyJ9LCJjdXJyZW50Ijp7InRpbWUiOiIyMDI2LTEwLTMwVDA1OjAwIiwiaW50ZXJ2YWwiOjkwMCwidGVtcGVyYXR1cmVfMm0iOjEyLjN9LCJkYWlseV91bml0cyI6eyJ0aW1lIjoiaXNvODYwMSIsInRlbXBlcmF0dXJlXzJtX21heCI6IsKwQyIsInRlbXBlcmF0dXJlXzJtX21pbiI6IsKwQyJ9LCJkYWlseSI6eyJ0aW1lIjpbIjIwMjYtMTAtMzAiXSwidGVtcGVyYXR1cmVfMm1fbWF4IjpbMTguOV0sInRlbXBlcmF0dXJlXzJtX21pbiI6WzExLjFdfX0=
+  recorded_at: Fri, 30 Oct 2026 12:10:24 GMT
+recorded_with: VCR 6.4.0

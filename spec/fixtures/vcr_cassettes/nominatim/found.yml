@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&limit=1&q=95014
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - forecast_app/1.0 (+https://github.com/lhpdev/forecast_app)
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '621'
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - gunicorn/asgi
+      X-Nominatim-Server:
+      - longma.openstreetmap.org
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Fri, 30 Oct 2026 12:10:21 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-gru-sbgr1930067-GRU
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1793362221.233351,VS0,VE222
+      Vary:
+      - accept-language, Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=300
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjM4MjU4NDY1MywibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJwb3N0Y29kZV9pZCI6IlB1czo5NTAxNCIsImxhdCI6IjM3LjMxNzgwODQiLCJsb24iOiItMTIyLjAzNzIyNjQiLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6InBvc3Rjb2RlIiwicGxhY2VfcmFuayI6MjEsImltcG9ydGFuY2UiOjAuMTIwMDA5OTk5OTk5OTk5OTUsImFkZHJlc3N0eXBlIjoicG9zdGNvZGUiLCJuYW1lIjoiOTUwMTQiLCJkaXNwbGF5X25hbWUiOiI5NTAxNCwgQ3VwZXJ0aW5vLCBTYW50YSBDbGFyYSBDb3VudHksIENhbGlmb3JuaWEsIFVuaXRlZCBTdGF0ZXMiLCJhZGRyZXNzIjp7InBvc3Rjb2RlIjoiOTUwMTQiLCJjaXR5IjoiQ3VwZXJ0aW5vIiwiY291bnR5IjoiU2FudGEgQ2xhcmEgQ291bnR5Iiwic3RhdGUiOiJDYWxpZm9ybmlhIiwiSVNPMzE2Ni0yLWx2bDQiOiJVUy1DQSIsImNvdW50cnkiOiJVbml0ZWQgU3RhdGVzIiwiY291bnRyeV9jb2RlIjoidXMifSwiYm91bmRpbmdib3giOlsiMzcuMDkyNDg3MyIsIjM3LjU0MzEyMDciLCItMTIyLjMxOTM1NDAiLCItMTIxLjc1NTEzMDkiXX1d
+  recorded_at: Fri, 30 Oct 2026 12:10:21 GMT
+recorded_with: VCR 6.4.0

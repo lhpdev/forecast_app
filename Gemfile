@@ -58,6 +58,12 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
+group :test do
+  # Record real HTTP interactions into YAML cassettes and replay them in specs
+  gem "vcr"
+  gem "webmock"
+end
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
