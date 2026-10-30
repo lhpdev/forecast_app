@@ -1,41 +1,53 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Getting Started
 
-Things you may want to cover:
+This guide covers the steps required to set up and run the application locally.
+
+# Requirements
 
 - Ruby version: 3.3.5 +
 
 - Rails version: 8.1.4
 
-- System dependencies:
+# System dependencies:
 
-  In order to fetch a Forecast by zipcode/address I needed to rely on two different free APIs: one for grabbing the lat, and long from a informed
-  address/zipcode (Nominatim API) and with that info in hands then I needed to call OpenMeteo to fetch its respective forecast for current day:
+To retrieve weather forecasts based on a user's address or ZIP code, the application relies on two free, publicly available APIs:
 
-  Free Location Seach API: https://nominatim.openstreetmap.org
-  Free Weather Forecast API search: https://open-meteo.com/
+Nominatim (OpenStreetMap) – Used to convert an address or ZIP code into geographic coordinates (latitude and longitude).
 
-  I have decided to take use these APIs as both are public and do not require API key and very easy to work with.
+Open-Meteo – Uses those coordinates to retrieve the corresponding weather forecast for the current day.
+
+I chose these services because they are free to use, publicly accessible, and do not require API keys, making them straightforward to integrate.
+
+# Database Setup
 
 - Database creation
-  bin/rails db:create
+  run: bin/rails db:create
 
 - Database initialization
-  bin/rails db:mibrate
+  run: bin/rails db:mibrate
 
-- Configuration:
-  Simply run: bin/dev
+# Running the Application
 
-  It will start the server running on localhost:3000
+Start the development environment:
+run: bin/dev
 
-- How to run the test suite
-  rspec
+Once the application has started, it will be available at:
 
-- Considerations:
-  For sake of time, I ended up using a simple form which didn't provide any address suggestion for users to select.
-  An improvement I would do for a production version of this app would be integration a google places feature like where
-  based on users input we would provide a suggested real location. This would avoid unecessary request for unrealistic places
+http://localhost:3000
 
-  Additionally I asked AI to write the .svg icons to use in this application.
+# Running the Test Suite
+
+To execute the test suite, run:
+run: rspec
+
+# Additional Notes and Considerations
+
+For the sake of simplicity and to stay within the available development time, I implemented a basic address input form without autocomplete or location suggestions.
+
+For a production-ready version, I would consider integrating a service such as Google Places API. This would allow users to receive real-time location suggestions as they type, helping ensure that submitted addres
+
+# AI-Assisted Development
+
+The SVG icons used throughout the application were generated with the assistance of AI.
